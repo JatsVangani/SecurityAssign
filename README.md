@@ -2,11 +2,13 @@
 
 1.Cross Site Scripting:
 simple POST method in our sample application to create and save a Patient to the database.
-@PostMapping("/createPatient")public void createPatient(@RequestBody Patient patient) throws SQLException {
-if(patient!=null) {
-ps.createPatient(patient);
-}
-}
+
+@PostMapping("/createPatient")
+public void createPatient(@RequestBody Patient patient) throws SQLException {
+        if(patient!=null) {
+       ps.createPatient(patient);
+     }
+ }
 Since the field ‘type’ is a free form field in the Book object, a user could enter any value and the method simply saves it. An attacker could insert javascript code into this field. Our UI can potentially execute this javascript while rendering the book, leading to XSS.POST /patient{"name" : "Harry Potter","age" : 22"doctorName" : "<script>alert(document.cookie)</script>"}
 
 
