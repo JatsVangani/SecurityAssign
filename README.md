@@ -44,6 +44,6 @@ Transfer form
 	value="Transfer"/>
 </form>
 
-Now pretend you authenticate to your bank’s website and then, without logging out, visit an evil website. The evil website contains an HTML page with the malicious Form
+Now pretend you authenticate to your Hospital’s website and then, without logging out, visit an evil website. The evil website contains an HTML page with the malicious Form
 you click on the submit button. In the process, you have unintentionally transferred patient records to a malicious user.
   
