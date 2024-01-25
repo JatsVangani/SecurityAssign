@@ -9,7 +9,13 @@ simple POST method in our sample application to create and save a Patient to the
        ps.createPatient(patient);
      }
  }
-Since the field ‘type’ is a free form field in the Book object, a user could enter any value and the method simply saves it. An attacker could insert javascript code into this field. Our UI can potentially execute this javascript while rendering the book, leading to XSS.POST /patient{"name" : "Harry Potter","age" : 22"doctorName" : "<script>alert(document.cookie)</script>"}
+Since the field ‘doctorName’ is a free form field in the Book object, a user could enter any value and the method simply saves it. An attacker could insert javascript code into this field. Our UI can potentially execute this javascript while rendering the patient, leading to 
+
+      XSS.POST /patient{
+     "name" : "Harry Potter",
+     "age" : 22
+     "doctorName" : "<script>alert(document.cookie)</script>"
+    }
 
 
 2.SQLInjection
