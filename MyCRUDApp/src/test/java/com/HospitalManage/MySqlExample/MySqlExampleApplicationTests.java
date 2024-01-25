@@ -1,10 +1,10 @@
-package com.HospitalManage.MySqlExample;
+package com.HospitalManage.MyCRUDApp;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MySqlExampleApplicationTests {
+class MyCRUDAppTests {
 
 	@Test
 	void contextLoads() {
