@@ -3,8 +3,8 @@
 1.Cross Site Scripting:
 simple POST method in our sample application to create and save a Patient to the database.
 
-@PostMapping("/createPatient")
-public void createPatient(@RequestBody Patient patient) throws SQLException {
+      @PostMapping("/createPatient")
+     public void createPatient(@RequestBody Patient patient) throws SQLException {
         if(patient!=null) {
        ps.createPatient(patient);
      }
@@ -14,8 +14,8 @@ Since the field ‘type’ is a free form field in the Book object, a user could
 
 2.SQLInjection
 Injection attacks work because, for many applications, the only way to execute a given computation is to dynamically generate code that is in turn run by another system or component. 
-public Patient getDetailsbyId(int id) throws SQLException {
-		
+                
+		public Patient getDetailsbyId(int id) throws SQLException {
 		String sqlQuery = "select * from patient_jdbl61 where id = "+id;
 		
 		logger.info("INSIDE PATIENT BY ID METHOD");
